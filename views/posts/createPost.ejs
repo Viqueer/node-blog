@@ -1,0 +1,45 @@
+<%- include (../includes/main/header.ejs) %>
+
+<!-- 
+    Image
+    Description
+    title
+    tag
+    author
+    date
+ -->
+<form action="/posts/create" method="post" enctype="multipart/form-data">
+  <div class="row">
+    <div class="col">
+        <label for="postTitle">Post Title</label>
+      <input type="text" name="postTitle" id="postTitle" class="form-control" placeholder="Post title" />
+    </div>
+    <div class="col">
+      <label for="postTag">Example multiple select</label>
+      <select multiple class="form-control" name="tag" id="postTag
+        <option value= "default" disabled selected>Select Tag</option>
+        <option value="lifestyle">Lifestyle</option>
+        <option value="health">Health</option>
+        <option value="education">Education</option>
+        <option value="security">Security</option>
+        <option value="food">Food</option>
+      </select>
+    </div>
+  </div>
+  <div class="custom-file">
+    <input type="file" name="postImage" id="postImage" class="custom-file-input"/>
+    <label class="custom-file-label" for="postImage">Choose file</label>
+  </div>
+  <div class="form-group">
+    <label for="postBody">Example textarea</label>
+    <textarea
+      class="form-control"
+      id="postBody"
+      name="postBody"
+      rows="3"
+    ></textarea>
+  </div>
+
+</form>
+
+<%- include (../includes/main/footer.ejs) %>
